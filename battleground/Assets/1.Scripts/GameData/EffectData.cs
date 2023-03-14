@@ -27,7 +27,7 @@ public class EffectData : BaseData
     {
         Debug.Log($"xmlFilePath = {Application.dataPath} + {dataDirectory}");
         this.xmlFilePath = Application.dataPath + dataDirectory;
-        TextAsset asset = ResourceManager.Load(dataPath) as TextAsset;
+        TextAsset asset = (TextAsset)ResourceManager.Load(dataPath);
         if( asset == null || asset.text == null)
         {
             this.AddData("New Effect");

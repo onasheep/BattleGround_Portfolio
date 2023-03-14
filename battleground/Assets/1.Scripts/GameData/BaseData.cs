@@ -35,13 +35,13 @@ public class BaseData : ScriptableObject
     public string[] GetNameList(bool showID, string filtrerWord = "")
     {
         string[] retList = new string[0];
-        if(this.name == null)
+        if(this.names == null)
         {
             return retList;
         }
         retList = new string[this.names.Length];
 
-        for (int i = 0; i < this.name.Length; i++)
+        for (int i = 0; i < this.names.Length; i++)
         {
             if(filtrerWord != "")
             {
